@@ -51,4 +51,13 @@ mod tests {
         bubble(&mut numbers);
         assert_eq!(&numbers, &expected)
     }
+
+    #[test]
+    fn it_bubble_sorts_strings() {
+        let mut strs = vec!["foo", "bar", "baz", "qux", "quux", "quuz", "corge", "grault"];
+        let expected = vec!["bar", "baz", "corge", "foo", "grault", "quux", "quuz", "qux"];
+
+        bubble(&mut strs);
+        assert_eq!(&strs, &expected);
+    }
 }

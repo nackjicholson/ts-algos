@@ -17,6 +17,7 @@ function bubbleSortConcept(array: number[]): number[] {
 
 function bubbleSort(array: number[]): number[] {
   array = array.slice();
+  console.log(array)
 
   while (true) {
     let swapped = false;
@@ -24,9 +25,9 @@ function bubbleSort(array: number[]): number[] {
       if (array[i] > array[i + 1]) {
         [array[i], array[i + 1]] = [array[i + 1], array[i]];
         swapped = true;
+        console.log(array);
       }
     }
-    console.log(array);
     if (!swapped) {
       break;
     }
